@@ -1,0 +1,31 @@
+/* Full page background */
+.home-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e9e9ed, #0f0e47);
+}
+
+/* Dashboard card */
+.dashboard-card {
+
+  
+
+
+  text-align: center;
+  border-radius: 10px;
+ 
+}
+
+/* Heading */
+.dashboard-card h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.dashboard-card p {
+  color: #f0eaea;
+  font-size: 16px;
+}

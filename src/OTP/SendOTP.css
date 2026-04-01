@@ -1,0 +1,133 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+/* WRAPPER */
+.send-wrapper{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#e9e9ed,#0f0e47);
+}
+
+/* CONTAINER */
+.send-container{
+  width:800px;
+  height:420px;
+  display:flex;
+  border-radius:15px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+  /* 🔥 PAGE LOAD ANIMATION */
+  animation: fadeZoom 0.8s ease;
+}
+
+/* LEFT */
+.send-left{
+  width:50%;
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:15px;
+}
+
+.send-left h2{
+  text-align:center;
+}
+
+.send-left input{
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+.send-left button{
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#031a76;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.send-left button:hover{
+  background:#02145a;
+}
+
+/* 🔥 RIGHT WITH S-CURVE + ANIMATION */
+.send-right{
+  width:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#031a76,#0f0e47);
+  color:white;
+
+  /* S-CURVE */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    10% 80%,
+    20% 50%,
+    10% 20%
+  );
+
+  /* 🔥 SLIDE ANIMATION */
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideInRight 1s forwards ease-out;
+}
+
+/* 🔥 SLIDE KEYFRAMES */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 🔥 FADE + ZOOM */
+@keyframes fadeZoom{
+  0%{
+    opacity:0;
+    transform: scale(0.95);
+  }
+  100%{
+    opacity:1;
+    transform: scale(1);
+  }
+}
+
+/* CARD */
+.send-card{
+  text-align:center;
+  z-index:1;
+}
+
+/* MESSAGE */
+.success-msg{
+  color:green;
+  text-align:center;
+}
+
+/* BACK */
+.back{
+  text-align:center;
+  cursor:pointer;
+  color:#0f0e47;
+  font-weight:500;
+}

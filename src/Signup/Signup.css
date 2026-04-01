@@ -1,0 +1,122 @@
+.signup-wrapper{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#dcdbe3,#0f0e47);
+}
+
+.signup-container{
+  width:750px;
+  max-height:80vh;
+  display:flex;
+  border-radius:15px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* LEFT */
+.signup-left{
+  width:50%;
+  padding:15px;
+  overflow-y:auto;
+  background:#f9f9f9;
+}
+
+.signup-left h2{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+/* FORM GROUP */
+.form-group{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:10px;
+}
+
+.form-group label{
+  font-size:12px;
+  margin-bottom:4px;
+  color:#333;
+  font-weight:500;
+}
+
+.form-group input{
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  font-size:13px;
+}
+
+/* BUTTON */
+.submit-btn{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border:none;
+  border-radius:20px;
+  background:#0f0e47;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.submit-btn:hover{
+  background:#1c1a70;
+}
+
+/* MESSAGE */
+.msg{
+  text-align:center;
+  margin-top:8px;
+  font-size:12px;
+}
+
+/* RIGHT */
+.signup-right{
+  width:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0f0e47;
+  color:white;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    12% 75%,
+    22% 50%,
+    12% 25%
+  );
+
+  animation: slideInRight 1s forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity:0;
+  }
+  to {
+    transform: translateX(0);
+    opacity:1;
+  }
+}
+
+/* CARD */
+.register-card{
+  text-align:center;
+  padding:20px;
+}
+
+.register-card button{
+  padding:8px 18px;
+  border:none;
+  border-radius:20px;
+  background:white;
+  cursor:pointer;
+}

@@ -1,0 +1,163 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+/* WRAPPER */
+.verify-wrapper{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#e9e9ed,#0f0e47);
+}
+
+/* CONTAINER */
+.verify-container{
+  width:800px;
+  height:420px;
+  display:flex;
+  border-radius:15px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* LEFT */
+.verify-left{
+  width:50%;
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:15px;
+}
+
+.verify-left form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;   /* 🔥 THIS LINE */
+}
+
+.verify-left h2{
+  text-align:center;
+}
+
+/* OTP */
+.otp-box{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.otp-box input{
+  width:45px;
+  height:50px;
+  text-align:center;
+  font-size:18px;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+/* BUTTON */
+.verify-left button{
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#0f0e47;
+  color:white;
+}
+
+/* 🔥 RIGHT WITH S-CURVE */
+/* 🔥 RIGHT WITH S-CURVE + ANIMATION */
+.verify-right{
+  width:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f0e47,#0f0e47);
+  color:white;
+
+  /* S-curve */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    12% 75%,
+    22% 50%,
+    12% 25%
+  );
+
+  /* IMPORTANT for overlay */
+  position: relative;
+  overflow: hidden;
+
+  /* 🔥 ANIMATION */
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideInRight 1s forwards ease-out;
+}
+
+/* 🔥 SAME ANIMATION */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 🔥 GLOW EFFECT */
+.verify-right::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,0.05);
+  z-index:0;
+}
+
+/* ✅ CARD ABOVE GLOW */
+.verify-card{
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+/* TEXT */
+.timer{
+  text-align:center;
+}
+
+.resend{
+  text-align:center;
+  cursor:pointer;
+  color:#0f0e47;
+}
+
+.success-msg{
+  text-align:center;
+}  
+
+/* 🔥 PAGE LOAD ANIMATION */
+.verify-container{
+  animation: fadeZoom 0.8s ease;
+}
+
+@keyframes fadeZoom{
+  0%{
+    opacity:0;
+    transform: scale(0.95);
+  }
+  100%{
+    opacity:1;
+    transform: scale(1);
+  }
+}
