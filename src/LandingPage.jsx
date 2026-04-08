@@ -889,7 +889,7 @@ const LandingPage = ({ isLoggedIn, setIsLoggedIn }) => {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-col">
-              <h3>SkillHub</h3>
+              <h3>Skill</h3>
               <ul>
                 <li>About us</li>
                 <li>Careers</li>
